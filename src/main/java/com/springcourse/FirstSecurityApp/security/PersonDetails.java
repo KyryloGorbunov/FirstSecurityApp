@@ -2,7 +2,6 @@ package com.springcourse.FirstSecurityApp.security;
 
 import com.springcourse.FirstSecurityApp.models.Person;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.parameters.P;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
@@ -26,7 +25,7 @@ public class PersonDetails implements UserDetails {
 
     @Override
     public String getUsername() {
-        return this.person.getUserName();
+        return this.person.getUsername();
     }
 
     @Override

@@ -16,11 +16,11 @@ public class Person {
     @NotEmpty
     @Size(min = 2, max = 100, message = "The name must be between 2 and 100 letters.")
     @Column(name = "username")
-    private String userName;
+    private String username;
 
     @Min(value = 1900, message = "The year must be greater than 1900")
     @Column (name = "year_of_birth")
-    private String yearOfBirth;
+    private int yearOfBirth;
 
     @Column (name = "password")
     private String password;
@@ -28,8 +28,8 @@ public class Person {
     public Person() {
     }
 
-    public Person(String userName, String yearOfBirth) {
-        this.userName = userName;
+    public Person(String username, int yearOfBirth) {
+        this.username = username;
         this.yearOfBirth = yearOfBirth;
     }
 
@@ -41,19 +41,19 @@ public class Person {
         this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getYearOfBirth() {
+    public int getYearOfBirth() {
         return yearOfBirth;
     }
 
-    public void setYearOfBirth(String yearOfBirth) {
+    public void setYearOfBirth(int yearOfBirth) {
         this.yearOfBirth = yearOfBirth;
     }
 
@@ -69,7 +69,7 @@ public class Person {
     public String toString() {
         return "Person{" +
                 "id=" + id +
-                ", userName='" + userName + '\'' +
+                ", username='" + username + '\'' +
                 ", yearOfBirth='" + yearOfBirth + '\'' +
                 ", password='" + password + '\'' +
                 '}';
